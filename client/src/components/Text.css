@@ -1,0 +1,26 @@
+/* 텍스트 섹션 스타일 */
+.text {
+  padding: 5% 1%; /* 섹션 위아래 여백 늘림 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  background-color: #f8f5f5; /* 배경 색상 */
+  min-height: 12rem; /* 최소 높이 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-heading {
+  font-size: 2rem; /* 글자 크기 */
+  font-weight: 700; /* 가벼운 텍스트 두께 */
+  line-height: 1.6; /* 줄 간격 */
+  color: #333; /* 텍스트 색상 */
+  margin: 0 auto; /* 가운데 정렬 */
+  max-width: 70rem; /* 최대 너비 */
+}
+
+@media (max-width: 768px) {
+  .text-heading {
+    font-size: 1rem; /* 작은 화면에서 글자 크기 축소 */
+    line-height: 1.5;
+  }
+}

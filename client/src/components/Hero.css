@@ -1,0 +1,187 @@
+/* Hero.css */
+/* 
+.hero {
+  background-color: var(--background-white);
+  color: var(--text-dark);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 80px 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 125, 50, 0.05); /* 약간의 녹색 오버레이 */
+/*}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--primary-green);
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.hero button {
+  background-color: var(--primary-green); /* 변경된 색상 */
+/*color: var(--text-light);
+  font-weight: 600;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: var(--secondary-green);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero button {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+*/
+/* 동영상 영역 스타일 */
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 동영상 위에 오버레이 효과 */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* 동영상 위의 컨텐츠 */
+.hero-content {
+  position: absolute;
+  top: 30%; /* 수직 가운데 정렬 */
+  left: 30%; /* 수평 가운데 정렬 */
+  z-index: 2; /* 오버레이 위에 표시 */
+  color: #fff; /* 텍스트 색상 */
+  text-align: left; /* 텍스트를 좌측 정렬 */
+  max-width: 600px;
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 20px; /* 내부 여백 */
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 버튼 컨테이너 */
+.hero-button-container {
+  margin-top: 10%; /* 텍스트와 버튼 사이 간격 */
+  margin-left: 30%;
+  display: flex;
+  justify-content: center; /* 버튼을 수평 가운데 정렬 */
+  align-items: center; /* 필요 시 수직 가운데 정렬 */
+}
+
+/* Hero Button 스타일 */
+.hero-button {
+  padding: 3% 4%;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--primary-green);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-content button:hover {
+  background: var(--secondary-green); /* 호버 색상 */
+}
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .hero-content {
+    top: 20%; /* 수직 위치 조정 */
+    padding: 10px; /* 내부 여백 축소 */
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem; /* 작은 화면에서 글자 크기 축소 */
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* 작은 화면에서 글자 크기 축소 */
+    margin-bottom: 1rem;
+  }
+
+  .hero-button {
+    padding: 10px 15px; /* 버튼 크기 축소 */
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    top: 15%; /* 더 작은 화면에서 위치 조정 */
+  }
+
+  .hero-content h1 {
+    font-size: 1.7rem; /* 글자 크기 추가 축소 */
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-button {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+}

@@ -1,0 +1,84 @@
+/* Header.css */
+@import "./variables.css";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-white);
+  padding: 20px 5%; /* 상대적 패딩 */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px var(--shadow);
+  box-sizing: border-box; /* 박스 사이징 */
+}
+
+.logo {
+  color: var(--primary-green);
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* 줄 바꿈 허용 */
+  margin-right: 15%;
+}
+
+.nav a {
+  color: var(--text-dark);
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+  white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+}
+
+.nav a:hover {
+  color: var(--primary-green);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .header {
+    padding: 20px 40px; /* 큰 화면에서는 고정 패딩 */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--background-white);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px var(--shadow);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%; /* 모바일에서 전체 너비 차지 */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

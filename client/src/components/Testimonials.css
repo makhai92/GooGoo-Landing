@@ -1,0 +1,68 @@
+/* Testimonials.css */
+@import "./variables.css";
+
+.testimonials {
+  padding: 80px 20px;
+  background-color: var(--quaternary-green); /* 아주 연한 녹색 배경 */
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 36px;
+  color: var(--primary-green);
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  width: 300px;
+  margin: 10px 20px;
+  padding: 20px;
+  background-color: var(--secondary-green);
+  border-left: 5px solid var(--primary-green);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px var(--shadow);
+  transition: transform 0.3s;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonial h4 {
+  font-size: 18px;
+  color: var(--primary-green);
+}
+
+/* 강조된 후기 스타일 */
+.highlight-testimonial {
+  border-left: 5px solid var(--highlight-color);
+  background-color: var(--tertiary-green);
+}
+
+.highlight-testimonial p {
+  color: var(--highlight-color);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    width: 80%;
+  }
+}

@@ -1,0 +1,135 @@
+/* 전체 HowTo 스타일 */
+.howto {
+  padding: 4% 2%;
+  background-color: #f9f9f9;
+}
+
+.howto-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+}
+
+/* HowTo 세로선 */
+.howto-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px; /* 선 두께 */
+  height: 100%;
+  background-color: #3cb371;
+  z-index: 0;
+}
+
+/* 세로선 점 */
+.howto-item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 4px solid #3cb371;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* HowTo 아이템 */
+.howto-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 1rem;
+}
+
+/* 텍스트와 이미지 */
+.howto-content {
+  flex: 1;
+  text-align: center;
+  z-index: 2; /* 선 위에 표시 */
+  margin-right: 10%;
+}
+.howto-content2 {
+  flex: 1;
+  text-align: center;
+  z-index: 2; /* 선 위에 표시 */
+  margin-left: 10%;
+}
+.howto-title {
+  font-size: 1.5rem;
+  color: #3cb371;
+  margin-bottom: 0.5rem;
+}
+.howto-title2 {
+  font-size: 1.5rem;
+  color: #3cb371;
+  margin-bottom: 0.5rem;
+}
+.howto-content p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.howto-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* 선 위에 표시 */
+  margin-left: 10%;
+}
+.howto-image2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* 선 위에 표시 */
+  margin-right: 10%;
+}
+.howto-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.howto-image2 img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* 반응형 스타일 */
+@media (max-width: 300%) {
+  .howto-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .howto-container::before {
+    left: 10%; /* 세로선 위치 조정 */
+  }
+
+  .howto-image {
+    margin-left: 0; /* 작은 화면에서 여백 제거 */
+  }
+
+  .howto-image2 {
+    margin-right: 0; /* 작은 화면에서 여백 제거 */
+  }
+
+  .howto-content {
+    text-align: center;
+    margin: 0; /* 텍스트 여백 초기화 */
+  }
+
+  .howto-content2 {
+    text-align: center;
+    margin: 0; /* 텍스트 여백 초기화 */
+  }
+}
