@@ -1,7 +1,7 @@
 // Hero.jsx
 import React, { useEffect } from "react";
 import "./Hero.css";
-import heroImage from "../assets/5.png"; // 히어로 섹션 이미지
+/*  import heroImage from "../assets/5.png"; //히어로 섹션 이미지*/
 
 const Hero = () => {
   useEffect(() => {

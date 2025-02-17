@@ -7,9 +7,9 @@ import Hero from "./components/Hero";
 import Text from "./components/Text";
 import Phone from "./components/Phone";
 import HowTo from "./components/HowTo";
-/*  import About from "./components/About";*/
+/*  import About from "./components/About";
 import HowItWorks from "./components/HowItWorks";
-import Testimonials from "./components/Testimonials";
+import Testimonials from "./components/Testimonials";*/
 import PreReservation from "./components/PreReservation";
 import Trust from "./components/Trust"; // 추가된 부분
 import Review from "./components/Review";
