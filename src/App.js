@@ -13,7 +13,7 @@ import Testimonials from "./components/Testimonials";*/
 import PreReservation from "./components/PreReservation";
 import Trust from "./components/Trust"; // 추가된 부분
 import Review from "./components/Review";
-import FAQ from "./components/FAQ";
+/*  import FAQ from "./components/FAQ";*/
 import Footer from "./components/Footer";
 import "./App.css";
 
